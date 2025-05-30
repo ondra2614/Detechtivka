@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Detektivka 2. úrověn</title>
+  <link rel="stylesheet" href="patrani_.css">
+  <link rel="icon" href="favicon.png">
+</head>
+<body>
+<h1> Jste v půlce cesty</h1>
+
+<div class="ohio">
+
+  <div class="obrazek_volba" onclick="window.location.href='patrani_3.html'">
+    <img src="sklepeni2.jpeg" height="200" width="300"  alt="sklep">
+    <p class="note">sklepení ze kterého vychází zvuky</p>
+  </div>
+
+  <div class="obrazek_volba" onclick="alert('zde ne'),ENERGIE()">
+    <img src="mistnost2.jpg" height="200" width="300" alt="místnost">
+    <p class="note">místnost s židlí prostě</p>
+  </div>
+
+  <div class="obrazek_volba" onclick="alert('moc opuštěné'),ENERGIE()">
+    <img src="neco_opusteneho.jpg" height="200" width="300" alt="opouštěná struktura">
+    <p class="note">moc děsivé na nějaké prozkoumávání</p>
+  </div>
+
+</div>
+<div>
+  <img  id="ipon" src="IPhone_3G.png" height="175" width="125" alt="iphone"/>
+  <img id="filip" src="filip.png" height="40" width="40" alt="filip"/>
+  <img id="whatsapp" src="WhatsApp.svg.webp" height="40" width="40" alt="whatsapp"/>
+</div>
+
+<div id="extraImg2" style="display: none;">
+  <img src="napoveda2-removebg-preview.png" width="250" height="170" alt="Nalezený důkaz">
+</div>
+
+<video ID="OMNI" src="OMNIMAN_WHATSAPP.mp4"></video>
+<div id="napovedaF1" style="position: absolute; top: -500px;"></div>
+
+  <audio id="audioPlayer" autoplay loop>
+    <source src="Cuphead%20OST%20-%20Inkwell%20Hell%20%5BMusic%5D.mp3" type="audio/mp3">
+  </audio>
+
+
+<script>
+
+  let energy = 120;
+  function ENERGIE(){
+    energy = energy -60;
+    if (energy === 0){
+      window.location.href="index.html";
+    }
+  }
+
+  const CUP = document.getElementById("audioPlayer");
+  CUP.volume = 0.25;
+
+  const filip = document.getElementById("filip");
+  const extraImg = document.getElementById("extraImg2");
+
+  filip.addEventListener("click", () => {
+    extraImg.style.display = "block";
+  });
+  setTimeout(() => {
+    extraImg.style.display = "none";
+  }, 15000);
+  const napoveda1 = document.getElementById("napovedaF1");
+
+  napoveda1.addEventListener("click", () => {
+    napoveda1.style.top = "50%";
+
+    setTimeout(() => {
+      napoveda1.style.top = "-1000px";
+    }, 12000);
+  });
+
+
+
+
+  const whatsapp = document.getElementById("whatsapp");
+  const video = document.getElementById("OMNI");
+  const ipon = document.getElementById("ipon");
+  ipon.style.pointerEvents = 'none';
+  whatsapp.addEventListener("click",() =>{
+    video.style.transition = "top 3s ease";
+    video.style.top = "50%";
+
+    setTimeout(() => {
+      video.play();
+    },2850);
+
+    setTimeout(() => {
+      video.style.top = "-1000px"
+    },12000);
+
+  })
+
+</script>
+</body>
+</html>

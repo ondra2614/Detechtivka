@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Detektivka 3. a finální úroveň</title>
+    <link rel="stylesheet" href="patrani_.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+
+<h1> Už se blížíte ke konci </h1>
+
+
+<div class="ohio">
+
+    <div class="obrazek_volba" onclick="alert('vůbec ne'),ENERGIE()">
+        <img id="mustafar" src="mustafar.jpeg" height="220" width="220" alt="Mustafar">
+        <p class="popisky">myslím, že tahle lokace s tímhle vůbec nesouvisí</p>
+    </div>
+
+
+    <div class="obrazek_volba" onclick="window.location.href='konec_patrani.html'">
+        <img id="lysa" src="07-Lysa_hora.jpg" height="220" width="220" alt="Lysá hora">
+        <p class="popisky"> jde vidět tam vidět jeho batoh</p>
+    </div>
+
+
+    <div class="obrazek_volba" onclick="alert('tady ne'),ENERGIE()">
+        <img id="pripjat" src="mesto-duchu-pripjat-m.png" height="220" width="220" alt="Pripjat">
+        <p class="popisky">tady by nejspíš nešel</p>
+        <p></p>
+    </div>
+<p></p>
+
+</div>
+<p></p>
+<div>
+    <img  id="ipon" src="IPhone_3G.png" height="175" width="125" alt="iphone"/>
+    <img id="filip" src="filip.png" height="40" width="40" alt="filip"/>
+    <img id="whatsapp" src="WhatsApp.svg.webp" height="40" width="40" alt="whatsapp"/>
+</div>
+
+<div id="extraImg3" style="display: none;">
+    <img src="napoveda3-removebg-preview.png" width="250" height="270" alt="Nalezený důkaz">
+</div>
+
+<video ID="OMNI" src="OMNIMAN_WHATSAPP.mp4"></video>
+<div id="napovedaF1" style="position: absolute; top: -500px;"></div>
+
+    <audio id="audioPlayer" autoplay loop>
+        <source src="Cuphead%20OST%20-%20Inkwell%20Hell%20%5BMusic%5D.mp3" type="audio/mp3">
+    </audio>
+
+
+<script>
+
+    let energy = 120;
+    function ENERGIE(){
+        energy = energy -60;
+        if (energy === 0){
+            window.location.href="index.html";
+        }
+    }
+
+    const CUP = document.getElementById("audioPlayer");
+    CUP.volume = 0.25;
+
+    const filip = document.getElementById("filip");
+    const extraImg = document.getElementById("extraImg3");
+
+    filip.addEventListener("click", () => {
+        extraImg.style.display = "block";
+    });
+    setTimeout(() => {
+        extraImg.style.display = "none";
+    }, 15000);
+    const napoveda1 = document.getElementById("napovedaF1");
+
+    napoveda1.addEventListener("click", () => {
+        napoveda1.style.top = "50%";
+
+        setTimeout(() => {
+            napoveda1.style.top = "-1000px";
+        }, 12000);
+    });
+
+
+
+    const whatsapp = document.getElementById("whatsapp");
+    const video = document.getElementById("OMNI");
+    const ipon = document.getElementById("ipon");
+    ipon.style.pointerEvents = 'none';
+    whatsapp.addEventListener("click",() =>{
+        video.style.transition = "top 3s ease";
+        video.style.top = "50%";
+
+        setTimeout(() => {
+            video.play();
+        },2850);
+
+        setTimeout(() => {
+            video.style.top = "-1000px"
+        },12000);
+
+    })
+
+</script>
+</body>
+</html>

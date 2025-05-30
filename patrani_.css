@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #23272b;
+    color: whitesmoke;
+    overflow: hidden;
+
+}
+h1 {
+    text-align: center;
+    color: cornflowerblue;
+    font-family: Arial, sans-serif;
+}
+
+.obrazek_volba img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.ohio{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 50vh;
+    align-items: center;
+    margin-top: -25px;
+}
+#mustafar {
+    margin-top: 2px;
+}
+
+.obrazek_volba{
+    margin-right: 50px;
+}
+
+.obrazek_volba:hover {
+    transform: scale(1.07);
+    transition: transform 0.5s ease;
+}
+button{
+    color: white;
+    background-color: maroon;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    height: 30px;
+    width: 50px;
+    border: #23272b;
+    text-decoration: none;
+    transition: transform 0.5s ease ;
+}
+button:hover{
+    transform: scale(200%);
+}
+#ipon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3px;
+}
+#filip {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+}
+#whatsapp {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+    transition: transform 0.5s ease;
+
+}
+#whatsapp:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+#OMNI {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: -1250px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 1s ease;
+}
+#napovedaF1 {
+    height: 250px;
+    width: 250px;
+}
+#napovedaF1 {
+    position: absolute;
+    top: -1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 3s ease;
+}
+#extraImg {
+    display: none;
+    position: relative;
+    left: 300px;
+}
+#extraImg2 {
+    display: none;
+    position: relative;
+    left: 300px;
+    bottom: -10px;
+}
+#extraImg3 {
+    display: none;
+    position: relative;
+    left: 300px;
+    bottom: 30px;
+}
+    #body_final:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("social_kredit-removebg-preview.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        z-index: -1;
+    }
+
+
+
+

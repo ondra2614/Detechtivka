@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>detektivka_ivan</title>
+    <link rel="stylesheet" href="patrani_.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+<h1>DETECHKTIVKA</h1>
+<h2>Ztratil se technik, zkus ho najít</h2>
+
+<h2>INFORMACE K PÁTRÁNÍ:</h2>
+
+<ul>
+    <li>Na hru máte neomezený čas</li>
+    <li>Pokud kliknete na tlačítko start tak začnete pátrat a už není cesty zpět</li>
+    <li>Hra má tři úrovně neboli levely v každém z nich jsou 3 obrázky a také k nim nějaké informace</li>
+    <li>Jen jeden z obrázků vede dále a zadnou energii neubírá, pokud ale vyberete špatně ztrácite 60 bodů energie a NEposunete se dále (na začátku máte 120 bodů energie)</li>
+    <li>Každá nová stránka vám znova doplní energii na 120</li>
+    <li>Pokud energie dosáhne nuly hra skončila a jste zase na začátku</li>
+    <li>Na každé stránce máte jednu nápovědu od Filipa</li>
+    <li>Nápovědu lze najít v telefonu po kliknutí na ikonu Filipa</li>
+    <li>Pozor!! Stránka je určena čistě pro POBAVENÍ a nemá NIKOHO zesměšnit ani poškodit</li>
+    <li>To je vše užijte si hru :D</li>
+</ul>
+<button ONCLICK="window.location.href='patrani_1.html'">START</button>
+
+<audio id="audioPlayer" autoplay loop>
+    <source src="Cuphead%20OST%20-%20Inkwell%20Hell%20%5BMusic%5D.mp3" type="audio/mp3">
+</audio>
+
+<footer>
+    <p>
+        &copy; created by Ondřej Ivan SPŠE Havířov 2025
+    </p>
+
+</footer>
+<script>
+    const CUP = document.getElementById("audioPlayer");
+    CUP.volume = 0.25;
+
+</script>
+</body>
+</html>
